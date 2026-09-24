@@ -1,6 +1,6 @@
 # Sequence Diagram — Login
 
-`login` (`api/app/routers/auth.py`) is written so PBKDF2 always runs — for a real user or a fixed dummy salt/hash — before any branch that could return early, so response timing can't reveal whether an email is registered. See [`../decisions/0002-hand-rolled-pbkdf2.md`](../decisions/0002-hand-rolled-pbkdf2.md) and [`../features/authentication.md`](../features/authentication.md).
+`login` (`api/app/routers/auth.py`) is written so PBKDF2 always runs — for a real user or a fixed dummy salt/hash — before any branch that could return early, so response timing can't reveal whether an email is registered. See [`../decisions/0002-pbkdf2-via-hashlib.md`](../decisions/0002-pbkdf2-via-hashlib.md) and [`../features/authentication.md`](../features/authentication.md).
 
 ```mermaid
 sequenceDiagram
